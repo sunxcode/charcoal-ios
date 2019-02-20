@@ -26,6 +26,10 @@ public class CharcoalViewController: UINavigationController {
         }
     }
 
+    public var queryItems: [URLQueryItem] {
+        return selectionStore.queryItems(for: filter.rootFilter)
+    }
+
     public var config: FilterConfiguration
     public weak var filterDelegate: CharcoalViewControllerDelegate?
 
